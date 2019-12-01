@@ -5,42 +5,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="public/css/bootstrap/bootstrap.min.css">
+
     <link rel="stylesheet" href="public/css/index.css">
+    <script src="public/js/jquery-3.4.1.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+
     <title>Hello World!</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-transparent fixed-top">
-        <ul class="navbar nav">
-            <li class="nav-item">
-                <a href="#" class="nav-link"> Home </a>
-            </li>
-            <li class="nav-item"> 
-                <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Awards</a>
-            </li>
-        </ul>
-    </nav>
-
+    <nav class="navbar navbar-expand-sm fixed-top navbar-default">
+            <ul class="navbar nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item"> 
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Awards</a>
+                </li>
+            </ul>
+        </nav>
     <div class="container-fluid main hidden-md-down">
         <div class="row">
             <div class="col-sm-8 col1">
                 <p class="name-intro"> I am </p>
                 <h1 class="name-head">Michael C. Bataller</h1>
+                <p class="intro">An active open-source software engineer (mainly Linux), UX designer, network manager, and web developer. </p>
+                <a href="https://github.com/mikaeruu" class="btn btn-outline-dark btn-intro">Check me on GitHub</a>
             </div>
             <div class="col-sm-4 col2">
                 <!-- BLANK FOR SPACING PURPOSES -->
             </div>
         </div>
+    </div>
+    
+    <div class="container-fluid about">
+        <h2 class="jumbotron-fluid text-center about">About</h2>
+        <p class="bio text-center"> I am a Computer Engineering student currently enrolled at Polytechnic University of the Philippines.<br> I am a passionate computer science learner and I am eager to learn programming languages, frameworks, and any other CS-related things when needed. </p>
+
+        <h2 class="jumbotron-fluid text-center">Skills</h2>
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">HTML</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                    85%
+                    </div>
+                </div><br>
+    
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">CSS</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                    80%
+                    </div>
+                </div> <br> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">PHP</span>
+            </div>
+            <div class="col">
+                <div class="progress">    
+                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                    65%
+                    </div>
+                </div> <br> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">JavaScript</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-info progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:45%">
+                    45%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+       <div class="row">
+            <div class="col-1">
+                <span class="progress-title">Python</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                    70%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">Django</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                    30%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">Laravel</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:5%">
+                    5%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">Node.js</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                    10%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">Photoshop</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                    85%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">React</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                        0%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">Angular</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                        0%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <span class="progress-title">UI Design</span>
+            </div>
+            <div class="col">
+                <div class="progress">
+                        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                        50%
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
         
+    
+    
+
+          
     </div>
 
-    <img src="public\img\dev.png" alt="dev" class="dev-img">
+    <img src="public\img\dev.png" alt="dev" class="dev-img d-none d-xl-block">
 
-
+    <script>
+            $(window).scroll(function(){
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+        });
+    </script>
 </body>
 </html>

@@ -9,9 +9,9 @@
 }
 
 .navbar {
-    margin-left: 3%;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 3%
 }
 
 .nav-link {
@@ -71,4 +71,72 @@ html {
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(25px -1px 5px #222);
 
+}
+
+p.intro {
+    float: left;
+    position: absolute;
+    font-size: 15pt;
+    top: 65%;
+    left: 15%;
+}
+
+.btn-intro {
+    float: left;
+    position: absolute;
+    font-size: 12pt;
+    top: 75%;
+    left: 15%;
+    padding: 1.3%;
+
+}
+
+.container-fluid.about {
+    background: white;
+    margin-top: 46%;
+    min-height: 300px;
+}
+
+.navbar-default{
+    transition:300ms ease;
+    background:transparent;
+}
+
+.navbar-default.scrolled{
+    background:#06313880;
+}
+
+h2.jumbotron-fluid.text-center {
+    padding-top: 3%;
+    font-size: 32pt;
+    padding-bottom: 30px;
+}
+
+h2.jumbotron-fluid.text-center.about  {
+    padding-top: 3%;
+    font-size: 40pt;
+}
+
+
+.progress {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    font-size: 14pt;
+}
+
+
+
+.bio{
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.progress-title {
+    float: left;
+    margin-left: 450px;
+    margin-right: -400px;
 }
