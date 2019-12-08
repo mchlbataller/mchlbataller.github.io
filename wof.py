@@ -122,19 +122,24 @@ def replacer(s, newstring, index, nofail=False):
     # insert the new string between "slices" of the original
     return s[:index] + newstring + s[index + 1:]
 
-def pick_Consonant(results):
-    for i in range(len(phrase1)):
-        entry = entry_chooseConsonant.get()
-        results.append(phrase1.find(str(entry), i))
-        
-    print(results)
+def pick_Consonant():
+    # Initialize a new array which returns the character positions
+    results = []
 
-    if results > 0:
+    if entry_chooseConsonant.get():
+        for i in range(len(phrase1)):
+            entry = entry_chooseConsonant.get()
+            results.append(phrase1.find(str(entry).upper(), i-1))
+                    
         for i in results:
-            Wheel_of_Fortune.dashed_string = replacer(Wheel_of_Fortune.dashed_string, entry_chooseConsonant.get(), i)
+            if i > -1:
+                Wheel_of_Fortune.dashed_string = replacer(Wheel_of_Fortune.dashed_string, entry.upper(), i)
+                print(Wheel_of_Fortune.dashed_string)
 
     action1_frame.grid_remove()
     action_frame.grid(row=1, column=0)
+    label_dashPhrase.configure(text="Phrases: " + str(Wheel_of_Fortune.dashed_string))
+
 
 
     
@@ -239,10 +244,7 @@ label_chooseConsonant.grid(row=3, column=0, sticky=E)
 entry_chooseConsonant = Entry(action1_frame)
 entry_chooseConsonant.grid(row=3, column=1, sticky=W)
 
-# Initialize a new array which returns the character positions
-results = []
-
-button_chooseConsonant = Button(action1_frame, text="Choose", command=pick_Consonant(results))
+button_chooseConsonant = Button(action1_frame, text="Choose", command=pick_Consonant)
 button_chooseConsonant.grid(row=4, column=1, sticky=W)
 
 
