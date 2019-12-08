@@ -64,6 +64,7 @@ class Wheel_of_Fortune:
         self.dashed_string = ""
         self.prize = ''
     
+    # Phrase to dashes
     def phrase_Dash(self):
         dashed_list = []
         for char in self.phrase:
@@ -134,15 +135,23 @@ def pick_Consonant():
         for i in results:
             if i > -1:
                 Wheel_of_Fortune.dashed_string = replacer(Wheel_of_Fortune.dashed_string, entry.upper(), i)
-                print(Wheel_of_Fortune.dashed_string)
 
     action1_frame.grid_remove()
     action_frame.grid(row=1, column=0)
-    label_dashPhrase.configure(text="Phrases: " + str(Wheel_of_Fortune.dashed_string))
 
-
-
+    # Update the dashed strings
+    label_dashPhrase.configure(text="Phrase: " + str(Wheel_of_Fortune.dashed_string))
     
+    # Updating the total money
+    if Wheel_of_Fortune.prize != 'BANKRUPT':
+        Player_Info1.roundMoney = Player_Info1.roundMoney + int(Wheel_of_Fortune.prize)
+        Player_Info1.totalMoney = Player_Info1.totalMoney + int(Wheel_of_Fortune.prize)
+    else:   # if bankrupt, reset to zero
+        Player_Info1.totalMoney = 0
+        Player_Info1.roundMoney = 0
+
+    label_roundMoney_player1.configure(text=str(Player_Info1.roundMoney))
+    label_totalMoney_player1.configure(text=str(Player_Info1.totalMoney))
 
     
 ## APPLICATION PROPER ###########################################
@@ -153,9 +162,7 @@ Wheel_of_Fortune = Wheel_of_Fortune(phrase1)
 Player_Info1 = Player_Info(player1)
 Player_Info2 = Player_Info(player2)
 
-
 Wheel_of_Fortune.phrase_Dash()
-print(Wheel_of_Fortune.dashed_string)
 
 # CREATING WINDOW ######
 
@@ -184,18 +191,18 @@ label_active1.grid(row=1, column=1)
 # Column 3
 label_roundMoney = Label(table_frame, text="Round Money", relief=SUNKEN)
 label_roundMoney.grid(row=0, column=2)
-lable_roundMoney_player1 = Label(table_frame, text="Round Money")
-lable_roundMoney_player1.grid(row=1, column=2)
-lable_roundMoney_player2 = Label(table_frame, text="Round Money")
-lable_roundMoney_player2.grid(row=2, column=2)
+label_roundMoney_player1 = Label(table_frame, text=Player_Info1.roundMoney)
+label_roundMoney_player1.grid(row=1, column=2)
+label_roundMoney_player2 = Label(table_frame, text=Player_Info2.roundMoney)
+label_roundMoney_player2.grid(row=2, column=2)
 
 # Column 4
 label_totalMoney = Label(table_frame, text="Total Money", relief=SUNKEN)
 label_totalMoney.grid(row=0, column=3)
-lable_totalMoney_player1 = Label(table_frame, text=str(Player_Info1.totalMoney))
-lable_totalMoney_player1.grid(row=1, column=3)
-lable_totalMoney_player2 = Label(table_frame, text=str(Player_Info1.totalMoney))
-lable_totalMoney_player2.grid(row=2, column=3)
+label_totalMoney_player1 = Label(table_frame, text=str(Player_Info1.totalMoney))
+label_totalMoney_player1.grid(row=1, column=3)
+label_totalMoney_player2 = Label(table_frame, text=str(Player_Info2.totalMoney))
+label_totalMoney_player2.grid(row=2, column=3)
 
 
 
