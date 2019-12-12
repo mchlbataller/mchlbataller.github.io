@@ -20,7 +20,7 @@
                     <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item"> 
-                    <a href="#" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Projects</a>
@@ -36,16 +36,16 @@
                 <p class="name-intro"> I am </p>
                 <h1 class="name-head">Michael C. Bataller</h1>
                 <p class="intro">An active open-source software engineer (mainly Linux), UX designer, network manager, and web developer. </p>
-                <a href="https://github.com/mikaeruu" class="btn btn-outline-dark btn-intro">Check me on GitHub</a>
+                <a href="https://github.com/mikaeruu" class="btn btn-outline-dark btn-intro">Want to talk while having coffee?</a>
             </div>
-            <div class="col-sm-4 col2">
+            <div class="col-sm-4 col2" id="particles-js">
                 <!-- BLANK FOR SPACING PURPOSES -->
             </div>
         </div>
     </div>
     
     <div class="container-fluid about">
-        <h2 class="jumbotron-fluid text-center about">About</h2>
+        <h2 class="jumbotron-fluid text-center about" id="about">About</h2>
         <p class="bio text-center"> I am a Computer Engineering student currently enrolled at Polytechnic University of the Philippines.<br> I am a passionate computer science learner and I am eager to learn programming languages, frameworks, and any other CS-related things when needed. </p>
 
         <h2 class="jumbotron-fluid text-center">Skills</h2>
@@ -224,7 +224,21 @@
           
     </div>
 
-    <img src="public\img\dev.png" alt="dev" class="dev-img d-none d-xl-block">
+    <div class="container projects">
+        <h1 class="text-center" id="projects">Projects</h1> 
+
+    </div>
+
+
+
+
+    <!-- Resources -->
+
+    <script src="public\js\particles.js"></script>
+    <script src="public\js\app.js"></script>
+
+
+    <img src="public\img\dev.png" alt="dev" class="dev-img d-none d-lg-block">
 
     <script>
             $(window).scroll(function(){
